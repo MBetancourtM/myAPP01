@@ -20,7 +20,7 @@ namespace myApp01
         private void btnProceso_Click(object sender, EventArgs e)
         {
             String nombre = txtNombre.Text;
-            MessageBox.Show(nombre);
+            MessageBox.Show("El nombre es : " + nombre);
         }
     }
 }

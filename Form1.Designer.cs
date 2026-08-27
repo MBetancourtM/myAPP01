@@ -36,7 +36,7 @@
             // btnProceso
             // 
             this.btnProceso.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.btnProceso.Location = new System.Drawing.Point(18, 95);
+            this.btnProceso.Location = new System.Drawing.Point(349, 44);
             this.btnProceso.Name = "btnProceso";
             this.btnProceso.Size = new System.Drawing.Size(325, 51);
             this.btnProceso.TabIndex = 0;
@@ -66,7 +66,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(685, 110);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.btnProceso);
