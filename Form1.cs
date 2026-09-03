@@ -12,9 +12,73 @@ namespace myApp01
 {
     public partial class Form1 : Form
     {
+        bool save = false;
+        string path;
+
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void abrirToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            if(ofpAbrir.ShowDialog() == DialogResult.OK)
+            {
+                path = ofpAbrir.FileName;
+                save = true;
+                rctTexto.LoadFile(ofpAbrir.FileName, RichTextBoxStreamType.PlainText);
+                guardarToolStripMenuItem1.Enabled = false;
+            }
+        }
+
+        private void guardarToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            if(save == false)
+            {
+                if(sfdGuardar.ShowDialog() == DialogResult.OK)
+                {
+                    path = sfdGuardar.FileName;
+                    save = true;
+                }
+
+            }
+
+            rctTexto.SaveFile(path, RichTextBoxStreamType.PlainText);
+            guardarToolStripMenuItem1.Enabled = false;
+        }
+
+        private void rctTexto_TextChanged(object sender, EventArgs e)
+        {
+            guardarToolStripMenuItem1.Enabled = true;
+        }
+
+        private void guardarComoToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            if(sfdGuardar.ShowDialog() == DialogResult.OK)
+            {
+                path = sfdGuardar.FileName;
+                rctTexto.SaveFile(path, RichTextBoxStreamType.PlainText);
+                guardarToolStripMenuItem1.Enabled = true;
+                save = true;
+            }
+        }
+
+        private void nuevoToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            rctTexto.Clear();
+            rctTexto.Focus();
+            path = "";
+            save = false;
+        }
+
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
