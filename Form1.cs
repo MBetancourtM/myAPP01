@@ -14,10 +14,13 @@ namespace myApp01
     {
         bool save = false;
         string path;
+        int contadorAutoguardado, contadorlLabel;
 
         public Form1()
         {
             InitializeComponent();
+
+            lblAutoguardado.Visible = false;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -44,12 +47,17 @@ namespace myApp01
                 {
                     path = sfdGuardar.FileName;
                     save = true;
+
+                    contadorAutoguardado = 0;
+
+                    tmrAutoguardado.Enabled = true;
                 }
 
             }
 
             rctTexto.SaveFile(path, RichTextBoxStreamType.PlainText);
             guardarToolStripMenuItem1.Enabled = false;
+            tmrAutoguardado.Enabled = true;
         }
 
         private void rctTexto_TextChanged(object sender, EventArgs e)
@@ -63,8 +71,12 @@ namespace myApp01
             {
                 path = sfdGuardar.FileName;
                 rctTexto.SaveFile(path, RichTextBoxStreamType.PlainText);
-                guardarToolStripMenuItem1.Enabled = true;
+                guardarToolStripMenuItem1.Enabled = false;
                 save = true;
+
+                contadorAutoguardado = 0;
+
+                tmrAutoguardado.Enabled = true;
             }
         }
 
@@ -74,6 +86,39 @@ namespace myApp01
             rctTexto.Focus();
             path = "";
             save = false;
+
+            tmrAutoguardado.Enabled = false;
+
+            contadorAutoguardado = 0;
+            contadorlLabel = 0;
+
+            lblAutoguardado.Visible = false;
+
+        }
+
+        private void tmrAutoguardado_Tick(object sender, EventArgs e)
+        {
+            contadorAutoguardado++;
+
+            if (contadorAutoguardado == 30)
+            {
+                rctTexto.SaveFile(path, RichTextBoxStreamType.PlainText);
+
+                lblAutoguardado.Text = "Autoguardando....";
+                lblAutoguardado.Visible = true;
+
+                contadorAutoguardado = 0;
+            }
+
+            if (lblAutoguardado.Visible == true) {
+                
+                contadorlLabel++;
+                
+                if (contadorlLabel == 3) { 
+                    lblAutoguardado.Visible = false; 
+                    contadorlLabel = 0; 
+                } 
+            }
         }
 
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
