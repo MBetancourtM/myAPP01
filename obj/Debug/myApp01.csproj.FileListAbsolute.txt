@@ -9,3 +9,9 @@ C:\Users\franc\source\repos\myApp01\myApp01\obj\Debug\myApp01.csproj.GenerateRes
 C:\Users\franc\source\repos\myApp01\myApp01\obj\Debug\myApp01.csproj.CoreCompileInputs.cache
 C:\Users\franc\source\repos\myApp01\myApp01\obj\Debug\myApp01.exe
 C:\Users\franc\source\repos\myApp01\myApp01\obj\Debug\myApp01.pdb
+C:\Users\franc\source\repos\myApp01\myApp01\obj\Debug\Interop.MediaPlayer.dll
+C:\Users\franc\source\repos\myApp01\myApp01\obj\Debug\Interop.WMPLib.dll
+C:\Users\franc\source\repos\myApp01\myApp01\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\franc\source\repos\myApp01\myApp01\obj\Debug\myApp01.csproj.ResolveComReference.cache
+C:\Users\franc\source\repos\myApp01\myApp01\bin\Debug\Interop.WMPLib.dll
+C:\Users\franc\source\repos\myApp01\myApp01\bin\Debug\AxInterop.WMPLib.dll

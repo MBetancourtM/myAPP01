@@ -13,6 +13,7 @@ namespace myApp01
     public partial class Form1 : Form
     {
         DateTime tiempo;
+        
         public Form1()
         {
             InitializeComponent();
@@ -23,7 +24,8 @@ namespace myApp01
             lblReloj.Text = DateTime.Now.ToLongTimeString();
             if(DateTime.Now.ToLongTimeString() == tiempo.ToLongTimeString())
             {
-                Console.Beep(1000, 200);
+                wmpAlarma.URL = @"C:\Users\franc\Downloads\Teletubis.mp3";
+                wmpAlarma.Ctlcontrols.play();
             }
         }
 
