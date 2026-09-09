@@ -14,7 +14,7 @@ namespace myApp01
     {
         bool save = false;
         string path;
-        int contadorAutoguardado, contadorlLabel;
+        int contadorAutoguardado, contadorLabel;
 
         public Form1()
         {
@@ -112,9 +112,9 @@ namespace myApp01
 
             if (lblAutoguardado.Visible == true) {
                 
-                contadorlLabel++;
+                contadorLabel++;
                 
-                if (contadorlLabel == 3) { 
+                if (contadorLabel == 3) { 
                     lblAutoguardado.Visible = false; 
                     contadorlLabel = 0; 
                 } 
