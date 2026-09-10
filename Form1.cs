@@ -24,7 +24,7 @@ namespace myApp01
             lblReloj.Text = DateTime.Now.ToLongTimeString();
             if(DateTime.Now.ToLongTimeString() == tiempo.ToLongTimeString())
             {
-                wmpAlarma.URL = @"C:\Users\franc\Downloads\Teletubis.mp3";
+                wmpAlarma.URL = @"C:\Users\franc\Music\Conocerla.mp3";
                 wmpAlarma.Ctlcontrols.play();
             }
         }
