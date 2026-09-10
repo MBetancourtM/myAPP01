@@ -100,7 +100,7 @@ namespace myApp01
         {
             contadorAutoguardado++;
 
-            if (contadorAutoguardado == 30)
+            if (contadorAutoguardado == 10)
             {
                 rctTexto.SaveFile(path, RichTextBoxStreamType.PlainText);
 
