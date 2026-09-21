@@ -90,7 +90,7 @@ namespace myApp01
             tmrAutoguardado.Enabled = false;
 
             contadorAutoguardado = 0;
-            contadorlLabel = 0;
+            contadorLabel = 0;
 
             lblAutoguardado.Visible = false;
 
@@ -116,7 +116,7 @@ namespace myApp01
                 
                 if (contadorLabel == 3) { 
                     lblAutoguardado.Visible = false; 
-                    contadorlLabel = 0; 
+                    contadorLabel = 0; 
                 } 
             }
         }

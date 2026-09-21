@@ -66,7 +66,7 @@
             this.toolStripSeparator1,
             this.salirToolStripMenuItem});
             this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
-            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(73, 26);
+            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(73, 24);
             this.archivoToolStripMenuItem.Text = "Archivo";
             // 
             // nuevoToolStripMenuItem1
@@ -152,7 +152,7 @@
             this.Controls.Add(this.mnuPrinicipal);
             this.MainMenuStrip = this.mnuPrinicipal;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Bloc de notas";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.mnuPrinicipal.ResumeLayout(false);
             this.mnuPrinicipal.PerformLayout();
