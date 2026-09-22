@@ -34,5 +34,21 @@ namespace myApp01
                 }
             }
         }
+
+        private void dgvRegistros_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Form2 editar = new Form2(
+                dgvRegistros.Rows[e.RowIndex].Cells[1].Value.ToString(),
+                dgvRegistros.Rows[e.RowIndex].Cells[2].Value.ToString()
+                );
+            
+            if(editar.ShowDialog() == DialogResult.OK)
+            {
+                string nombre = editar.actualizaNombre;
+                string correo = editar.actualizaCorreo;
+                dgvRegistros.Rows[e.RowIndex].Cells[1].Value = nombre;
+                dgvRegistros.Rows[e.RowIndex].Cells[2].Value = correo;
+            }
+        }
     }
 }

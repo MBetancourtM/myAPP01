@@ -28,13 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.dgvRegistros = new System.Windows.Forms.DataGridView();
+            this.btnCargar = new System.Windows.Forms.Button();
+            this.ofdCSV = new System.Windows.Forms.OpenFileDialog();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnCargar = new System.Windows.Forms.Button();
-            this.ofdCSV = new System.Windows.Forms.OpenFileDialog();
+            this.Column4 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -68,7 +71,9 @@
             this.dgvRegistros.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
-            this.Column3});
+            this.Column3,
+            this.Column4,
+            this.Column5});
             this.dgvRegistros.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvRegistros.Location = new System.Drawing.Point(0, 0);
             this.dgvRegistros.Name = "dgvRegistros";
@@ -77,6 +82,22 @@
             this.dgvRegistros.RowTemplate.Height = 24;
             this.dgvRegistros.Size = new System.Drawing.Size(800, 364);
             this.dgvRegistros.TabIndex = 0;
+            this.dgvRegistros.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRegistros_CellContentClick);
+            // 
+            // btnCargar
+            // 
+            this.btnCargar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.btnCargar.Location = new System.Drawing.Point(12, 12);
+            this.btnCargar.Name = "btnCargar";
+            this.btnCargar.Size = new System.Drawing.Size(159, 42);
+            this.btnCargar.TabIndex = 0;
+            this.btnCargar.Text = "Cargar";
+            this.btnCargar.UseVisualStyleBackColor = true;
+            this.btnCargar.Click += new System.EventHandler(this.btnCargar_Click);
+            // 
+            // ofdCSV
+            // 
+            this.ofdCSV.FileName = "openFileDialog1";
             // 
             // Column1
             // 
@@ -102,20 +123,25 @@
             this.Column3.ReadOnly = true;
             this.Column3.Width = 200;
             // 
-            // btnCargar
+            // Column4
             // 
-            this.btnCargar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.btnCargar.Location = new System.Drawing.Point(12, 12);
-            this.btnCargar.Name = "btnCargar";
-            this.btnCargar.Size = new System.Drawing.Size(159, 42);
-            this.btnCargar.TabIndex = 0;
-            this.btnCargar.Text = "Cargar";
-            this.btnCargar.UseVisualStyleBackColor = true;
-            this.btnCargar.Click += new System.EventHandler(this.btnCargar_Click);
+            this.Column4.HeaderText = "";
+            this.Column4.Image = ((System.Drawing.Image)(resources.GetObject("Column4.Image")));
+            this.Column4.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
+            this.Column4.MinimumWidth = 6;
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Width = 50;
             // 
-            // ofdCSV
+            // Column5
             // 
-            this.ofdCSV.FileName = "openFileDialog1";
+            this.Column5.HeaderText = "";
+            this.Column5.Image = ((System.Drawing.Image)(resources.GetObject("Column5.Image")));
+            this.Column5.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
+            this.Column5.MinimumWidth = 6;
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            this.Column5.Width = 50;
             // 
             // Form1
             // 
@@ -124,7 +150,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.splitContainer1);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Personas";
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
@@ -139,10 +165,12 @@
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.Button btnCargar;
         private System.Windows.Forms.DataGridView dgvRegistros;
+        private System.Windows.Forms.OpenFileDialog ofdCSV;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.OpenFileDialog ofdCSV;
+        private System.Windows.Forms.DataGridViewImageColumn Column4;
+        private System.Windows.Forms.DataGridViewImageColumn Column5;
     }
 }
 
